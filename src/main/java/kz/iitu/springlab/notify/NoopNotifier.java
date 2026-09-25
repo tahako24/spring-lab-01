@@ -1,11 +1,9 @@
 package kz.iitu.springlab.notify;
 
-import org.springframework.context.annotation.Fallback;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-@Component("noop")
-@Fallback                                  // запасной вариант (Spring 6.2+)
+@Component("noop") // запасной вариант (Spring 6.2+)
 @Order(99)
 class NoopNotifier implements Notifier {
 
